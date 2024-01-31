@@ -1,0 +1,365 @@
+/* styles.module.scss */
+
+// Utility classes
+
+/* styles.module.scss */
+
+.header {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: slategray;
+    position: fixed;
+    top: 0;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+
+            li {
+                margin-right: 15px;
+                /* Add margin to create spacing between nav items */
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            /* Increased font size for navigation links */
+
+            &:hover {
+                color: yellow;
+            }
+        }
+    }
+
+    /* Button styles */
+    button {
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+        /* Increased font size for buttons */
+        background-color: rgb(83, 36, 36);
+        color: white;
+        border-radius: 24px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(117, 49, 49);
+        }
+    }
+
+    span {
+        color: white;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+
+.m-4 {
+    margin: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.w-3\/4 {
+    width: 75%;
+}
+
+// Background colors
+.bg-yellow-100 {
+    background-color: #fff59d;
+}
+
+.bg-gray-100 {
+    background-color: #f3f4f6;
+}
+
+.hover\:bg-orange-100:hover {
+    background-color: #fee8d5;
+}
+
+// Transition
+.transition {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0s;
+}
+
+.duration-300 {
+    transition-duration: 0.3s;
+}
+
+// Typography
+.text-xl {
+    font-size: 2rem;
+    /* Increased font size */
+}
+
+.text-2xl {
+    font-size: 2.5rem;
+    /* Increased font size */
+}
+
+.text-3xl {
+    font-size: 3rem;
+    /* Increased font size */
+}
+
+.text-4xl {
+    font-size: 3.75rem;
+    /* Increased font size */
+}
+
+.text-5xl {
+    font-size: 4.5rem;
+    /* Increased font size */
+}
+
+.font-semibold {
+    font-weight: 700;
+    /* Increased font weight */
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Text colors
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+// Margin and padding
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+// Cursor
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Additional colors
+.text-red-500 {
+    color: #ef4444;
+}
+
+.text-green-500 {
+    color: #10b981;
+}
+
+// Hover underline
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+/* Additional styles for the login/signup page */
+.loginForm,
+.signupForm {
+    width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 30px;
+        color: #333;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: calc(100% - 40px);
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+    }
+
+    p {
+        margin-bottom: 15px;
+        color: #ff6347;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    button[type="submit"] {
+        width: calc(100% - 40px);
+        padding: 14px;
+        background-color: #6c5ce7;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        outline: none;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #4834d4;
+    }
+
+    .quality-of-life {
+        color: #777;
+        font-size: 12px;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .loading::after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        border: 2px solid #fff;
+        border-top: 2px solid #6c5ce7;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+.homeContainer {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide the screen into two columns */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.newsListContainer {
+    width: 200%;
+    margin: 0 auto;
+    /* Center the container */
+}
+.newsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0rem;
+}
+
+.newsTable td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    /* Increase padding for larger row size */
+    text-align: left;
+}
+
+.rankTitleHost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rankTitleHost>* {
+    margin-right: 8px;
+}
+
+.rankTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.hostUrl {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.secondaryDetails {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+}
+
+.deleteIcon {
+    color: #ff4500;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.deleteIcon:hover {
+    cursor: pointer;
+    color: #0000ff;
+}

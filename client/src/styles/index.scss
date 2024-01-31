@@ -1,0 +1,92 @@
+/* index.scss */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: slategray;
+    position: fixed;
+    top: 0;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+
+            li {
+                margin-left: 15px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+
+                &:hover {
+                    color: yellow;
+                }
+            }
+        }
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+        background-color: rgb(83, 36, 36);
+        color: white;
+        border-radius: 24px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(117, 49, 49);
+        }
+    }
+
+    span {
+        color: white;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 120px 30px 0 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.spinner {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
